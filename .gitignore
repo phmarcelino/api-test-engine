@@ -1,0 +1,15 @@
+# Pasta do ambiente virtual — não precisa versionar, o requirements.txt já documenta tudo
+venv/
+
+# Arquivos de cache do Python gerados automaticamente em tempo de execução
+__pycache__/
+*.pyc
+
+# Arquivo de variáveis sensíveis — NUNCA deve ir pro GitHub
+.env
+
+# Arquivo de banco de dados SQLite que será gerado localmente
+*.db
+
+# Arquivo de sistema do macOS (não se aplica aqui, mas é boa prática incluir)
+.DS_Store
