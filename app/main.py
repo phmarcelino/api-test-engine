@@ -2,9 +2,11 @@ from fastapi import FastAPI
 from  app.core.config import settings
 
 from app.routers import auth
+from app.routers import rest_tester
 
 from app.database import engine
 from app.models import user
+from app.models import rest_request
 from app.database import Base
 
 Base.metadata.create_all(bind=engine)
@@ -17,6 +19,7 @@ app = FastAPI(
 )
 
 app.include_router(auth.router)
+app.include_router(rest_tester.router)
 
 @app.get("/health")
 def health_check():
